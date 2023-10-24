@@ -8,7 +8,7 @@ require('dotenv').config()
 const app = express();
 app.use(bodyParser.json());
 const typeorm = require("typeorm");
-const Data = require('./entities/DataSchema');
+const Company = require('./entities/CompanySchema');
 
 typeorm.createConnection({
     type: "mysql",
@@ -20,7 +20,7 @@ typeorm.createConnection({
     synchronize: true,
     logging: false,
     entities: [
-        require("./entities/DataSchema"),
+        require("./entities/CompanySchema"),
     ]
 }).then(function (connection) {
 
@@ -77,7 +77,7 @@ typeorm.createConnection({
 
     app.get('/data', async (req, res) => {
         try {
-            const dataRepository = connection.getRepository(Data);
+            const dataRepository = connection.getRepository(Company);
             const company = await dataRepository.findOneBy({'companyName': 'ACME'});
             res.json(company);
         } catch (error) {
