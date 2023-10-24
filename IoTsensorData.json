@@ -1,6 +1,8 @@
 [
     {
-      "sensor" : ""   
+      "telemetry id" : "identifyer UiD( Serie, Numero de canal)",
+      "telemetry_value and unit_value" : "float"  
+      "tiempo"
     }
 
     {
