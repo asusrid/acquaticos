@@ -28,6 +28,10 @@
   color: #61dafb;
 }
 
+.table-container {
+  padding: 2%;
+}
+
 
 @keyframes App-logo-spin {
   from {
