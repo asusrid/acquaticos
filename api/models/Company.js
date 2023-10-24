@@ -1,4 +1,4 @@
-/*export */ class Data {
+/*export */ class Company {
     constructor(id, companyName, companyId) {
         this.id = id;
         this.companyName = companyName;
@@ -7,5 +7,5 @@
 }
 
 module.exports = {
-    Data: Data
+    Company: Company
 };
