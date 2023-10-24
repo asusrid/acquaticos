@@ -24,8 +24,9 @@ while True:
           "Location" : location1,
           "Unit" : unity,
           "Value": value1}
-  response = requests.post(url, data=data)
-  print(response.text)
+  #response = requests.post(url, data=data)
+  #print(response.text)
+  print("v1 :" + str(value1))
   value1 += random.randint(1900, 2150)
   time.sleep(t)
 
@@ -35,8 +36,9 @@ while True:
           "Location" : location2,
           "Unit" : unity,
           "Value": value2}
-  response = requests.post(url, data=data)
-  print(response.text)
+  #response = requests.post(url, data=data)
+  #print(response.text)
+  print("v2 :" + str(value2))
   value2 += random.randint(1900, 2150)
   time.sleep(t)
 
@@ -45,9 +47,10 @@ while True:
           "Location" : location3,
           "Unit" : unity,
           "Value": value3}
-  response = requests.post(url, data=data)
-  print(response.text)
-  value2 += random.randint(1900, 2150)
+  #response = requests.post(url, data=data)
+  #print(response.text)
+  print("v3 :" + str(value3))
+  value3 += random.randint(1900, 2150)
   time.sleep(t)
 # Print the response
 
