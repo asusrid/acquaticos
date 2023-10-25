@@ -368,15 +368,18 @@ const AcquaTokenApp = () => {
 
   return (
     <div style={{ padding: '5%' }}>
-      <h1>Acqua Token</h1>
-      <div>
-        <h3>Your Balance: {balance}</h3>
-        <h3>Total Supply: {supply}</h3>
+      <div style={{ marginBottom: '5%' }}>
+        <h1>Acqua Token</h1>
+        <hr />
+        <div>
+          <h3>Your Balance: {balance}</h3>
+          <h3>Total Supply: {supply}</h3>
+        </div>
       </div>
-
       <h1>Acqua Dashboard</h1>
+      <hr />
       <div>
-        <h2>Remaining: {remaining.toString()}</h2>
+        <h3>Remaining: {remaining.toString()}</h3>
         <div style={{ padding: '5%' }}>
           <table className="table table-striped">
             <thead>
