@@ -1,44 +1,49 @@
 import './App.css';
-// import Table from 'react-bootstrap/Table';
+// import Table from 'react-bootstrap/Table';}
+import DataTable from './dataTable';
+import {useState} from 'react';
 
 const App = () => {
-  return (
-    <div>
-      <h1>Acqua Management Console</h1>
-      <div className="table-container">
-        <table className="table table-striped">
-          <thead class="thead-dark">
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Handle</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
-            </tr>
-          </tbody>
-        </table>
+
+  const [walletAddress, setWalletAddress] = useState("")
+  async function requestAccount(){
+    console.log("requesting account")
+    if(window.ethereum){
+      try{
+        const accounts = await window.ethereum.request({
+          method: "eth_requestAccounts",
+        });
+        setWalletAddress(accounts[0])
+      }catch (error){
+        console.log("error connecting")
+      }
+
+    } else {
+      alert("meta mask ot detected")
+    }
+
+  } 
+
+  if(walletAddress ==""){
+    return (
+      <div>
+        <h1>Acqua Management Console</h1>
+        <button onClick= {requestAccount}>Connect Wallet</button>
+        <h3>Address :{walletAddress} </h3>
       </div>
-    </div>
-  );
+    );
+
+  } else {
+    return (
+      <div>
+        <h1>Acqua Management Console</h1>
+        <button onClick= {requestAccount}>Connect Wallet</button>
+        <h3>Address :{walletAddress} </h3>
+        <DataTable/>
+      </div>
+    );
+
+  }
 };
 
 export default App;

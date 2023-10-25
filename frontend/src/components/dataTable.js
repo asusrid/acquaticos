@@ -1,5 +1,6 @@
 
 const DataTable = () => {
+  
   return (
     <div>
         <h1>Company Name</h1>
