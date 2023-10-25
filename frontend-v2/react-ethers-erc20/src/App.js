@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
 import Table from 'react-bootstrap/Table';
+import 'bootstrap/dist/css/bootstrap.css';
 
 const AcquaTokenApp = () => {
   const [balance, setBalance] = useState('');
@@ -363,44 +364,47 @@ const AcquaTokenApp = () => {
 
   useEffect(() => {
     setLoading(false);
-    console.log(sensorData);
   }, [sensorData]);
 
   return (
-    <div>
+    <div style={{ padding: '5%' }}>
       <h1>Acqua Token</h1>
       <div>
-        <h2>Your Balance: {balance}</h2>
-        <h2>Total Supply: {supply}</h2>
+        <h3>Your Balance: {balance}</h3>
+        <h3>Total Supply: {supply}</h3>
       </div>
 
       <h1>Acqua Dashboard</h1>
       <div>
-        <h2>Remaining: {remaining}</h2>
-        <h2>Data: {pullDataByCompany}</h2>
-
-        <table>
-          <thead>
-            <tr>
-              <th>Sensor</th>
-              <th>Site</th>
-              <th>Value</th>
-              <th>Unit</th>
-            </tr>
-          </thead>
-          <tbody>
-            {loading
-              ? 'Loading...'
-              : sensorData.map((item, index) => (
+        <h2>Remaining: {remaining.toString()}</h2>
+        <div style={{ padding: '5%' }}>
+          <table className="table table-striped">
+            <thead>
+              <tr>
+                <th>Sensor</th>
+                <th>Site</th>
+                <th>Value</th>
+                <th>Unit</th>
+              </tr>
+            </thead>
+            <tbody>
+              {loading ? (
+                <tr>
+                  <td>'Loading...'</td>
+                </tr>
+              ) : (
+                sensorData.map((item, index) => (
                   <tr key={index}>
                     <td>{item[0]}</td>
                     <td>{item[1]}</td>
                     <td>{item[2].toString()}</td>
                     <td>{item[3].toString()}</td>
                   </tr>
-                ))}
-          </tbody>
-        </table>
+                ))
+              )}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );
