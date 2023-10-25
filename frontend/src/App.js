@@ -1,46 +1,37 @@
+import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
+import DataTable from './components/dataTable';
+import JoinWallet from "./components/joinWallet";
+import OurMission from "./components/OurMission";
 import './App.css';
-// import Table from 'react-bootstrap/Table';
 
 const App = () => {
   return (
     <div>
-      <h1>Header Usernemane and wallet</h1>
+       <Router>
       <div>
-        <h1>Acqua Management Console</h1>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">Our Mission</Link>
+            </li>
+            <li>
+              <Link to="/fcode">Connect Wallet</Link>
+            </li>
+          </ul>
+        </nav>
+        <Routes>
+          <Route path="/" element={<DataTable />} />
+          <Route path="/about" element={<OurMission />} />
+          <Route path="/fcode" element={<JoinWallet />} />
+        </Routes>
       </div>
-      <div className="table-container">
-        <table className="table table-striped">
-|          <thead class="thead-dark">
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Size</th>
-              <th scope="col">Volume</th>
-              <th scope="col">Goal</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Barcelona</td>
-              <td>2000</td>
-              <td>8000</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Barcelona</td>
-              <td>2000</td>
-              <td>8000</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Barcelona</td>
-              <td>2000</td>
-              <td>8000</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    </Router>
+
     </div>
+    
   );
 };
 
