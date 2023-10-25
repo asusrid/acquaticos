@@ -1,7 +1,18 @@
 import './App.css';
+import { acquaTestContract } from './utils/interact';
+import { useEffect } from 'react';
 // import Table from 'react-bootstrap/Table';
 
 const App = () => {
+  const connect = async () => {
+    const test = await acquaTestContract();
+    console.log(test.functions.getNumber());
+  };
+
+  useEffect(() => {
+    connect();
+  }, []);
+
   return (
     <div>
       <h1>Acqua Management Console</h1>
