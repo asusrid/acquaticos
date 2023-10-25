@@ -14,7 +14,7 @@ t = 2
 value1 = 2000000
 value2 = 2000000
 value3 = 2000000
-url = 'https://example.com/data'
+url = 'https://api.acquachain.xyz/data'
 
 
 # Send POST request with FORM data using the data parameter

@@ -3,9 +3,11 @@ import './App.css';
 import DataTable from './dataTable';
 import {useState} from 'react';
 
+
 const App = () => {
 
   const [walletAddress, setWalletAddress] = useState("")
+  const [wallet,setWallet] = useState();
   async function requestAccount(){
     console.log("requesting account")
     if(window.ethereum){
@@ -13,7 +15,8 @@ const App = () => {
         const accounts = await window.ethereum.request({
           method: "eth_requestAccounts",
         });
-        setWalletAddress(accounts[0])
+        setWalletAddress(accounts[0]);
+        setWallet(accounts);
       }catch (error){
         console.log("error connecting")
       }
@@ -39,9 +42,23 @@ const App = () => {
         <h1>Acqua Management Console</h1>
         <button onClick= {requestAccount}>Connect Wallet</button>
         <h3>Address :{walletAddress} </h3>
-        <DataTable/>
       </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     );
+
 
   }
 };
