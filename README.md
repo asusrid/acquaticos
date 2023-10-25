@@ -16,6 +16,14 @@ A Ruby script that colorizes the `ls` output with color and icons. Here are the 
 # Table of contents
 
 - [Usage](#usage)
+- Overview
+- The problem
+- Global impact
+- Our solution
+- Demo
+- Team
+
+  
   - [Flags](#flags)
     - `-1`
     - `-a`   (or) `--all`
@@ -39,7 +47,7 @@ A Ruby script that colorizes the `ls` output with color and icons. Here are the 
 - [Contributing](#contributing)
 - [License](#license)
 
-# Usage
+# Overview
 
 [(Back to top)](#table-of-contents)
 
