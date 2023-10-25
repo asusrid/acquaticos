@@ -5,6 +5,7 @@ pragma abicoder v2;
 import "./AcquaToken.sol";
 
 contract AcquaDashboard {
+    address public governmentAddress;
     address[] public companies;
     mapping(address => int) public remaining;
     mapping(address => SensorData[]) public companyToSensorData;
@@ -29,15 +30,15 @@ contract AcquaDashboard {
 
     constructor(
         address _acquaAddress,
-        address _companyAddress,
+        address _government,
         string[] memory _sites,
         uint[] memory _benchmarks
     ) {
         for (uint i = 0; i < _benchmarks.length; i++) {
             sitesToBenchmark[_sites[i]] = _benchmarks[i];
         }
-        companies.push(_companyAddress);
         acquaToken = AcquaToken(_acquaAddress);
+        governmentAddress = _government;
     }
 
     function pushData(
@@ -63,6 +64,7 @@ contract AcquaDashboard {
         sensorData.value = _value;
         sensorData.unit = unitStruct;
 
+        companies.push(msg.sender);
         companyToSensorData[msg.sender].push(sensorData);
         sensorIDToSensorData[_sensorID].push(sensorData);
 
@@ -85,7 +87,7 @@ contract AcquaDashboard {
 
         if (remaining[company] >= int(_benchmark)) {
             uint numTokens = (uint(remaining[company]) / _benchmark);
-            acquaToken.mint(msg.sender, numTokens);
+            acquaToken.mint(msg.sender, numTokens * 1e18);
             remaining[company] -= int(numTokens * _benchmark);
         }
     }
@@ -100,6 +102,12 @@ contract AcquaDashboard {
         string memory _sensorID
     ) external view returns (SensorData[] memory) {
         return sensorIDToSensorData[_sensorID];
+    }
+
+    function transferGovernment(uint _amount) external returns (bool) {
+        require(_amount > 0, "Amount not valid");
+        acquaToken.transfer(_amount, msg.sender, governmentAddress);
+        return true;
     }
 
     function compareStrings(
