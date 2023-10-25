@@ -1,12 +1,4 @@
-[
-    {
-      "telemetry id" : "identifyer UiD( Serie, Numero de canal)",
-      "telemetry_value and unit_value" : "float"  
-      "tiempo"
-    }
-
-    {
-
-    }
-
-]
+{"Id": str(sensor1Id),
+"Location" : location1,
+"Unit" : unity,
+"Value": value1}
