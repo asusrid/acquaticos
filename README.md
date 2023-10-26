@@ -8,7 +8,10 @@ Every liter saved below industry benchmarks converts to Acqua Credits, which the
 
 With growing global water scarcity, Acqua Credits isn't just a project; it's a step towards a sustainable future. Let's make every drop count, together!
 
+![AcquaChain](https://github.com/asusrid/acquaticos/assets/48621389/57d34783-78af-4526-9df6-8f5bf2742651)
 
+[
+](https://drive.google.com/file/d/1qOYJkXYR6puonu_XWNrho_BOeAjgNJb7/view?usp=sharing)
 
 # Table of contents
 
