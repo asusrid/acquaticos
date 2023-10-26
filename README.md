@@ -1,244 +1,89 @@
-# Color LS
+# AcquaChain
 
-[![forthebadge](http://forthebadge.com/images/badges/made-with-ruby.svg)](http://forthebadge.com)
-[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
+Imagine a world where every drop of water saved by companies translates to a tangible digital asset. Welcome to Acqua Credits!
 
-[![Gem Version](https://badge.fury.io/rb/colorls.svg)](https://badge.fury.io/rb/colorls)
-[![CI](https://github.com/athityakumar/colorls/actions/workflows/ruby.yml/badge.svg)](https://github.com/athityakumar/colorls/actions/workflows/ruby.yml)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=shields)](http://makeapullrequest.com)
+We've merged IoT with blockchain to create a revolutionary system where companies are rewarded for water conservation.
 
-A Ruby script that colorizes the `ls` output with color and icons. Here are the screenshots of working example on an iTerm2 terminal (Mac OS), `oh-my-zsh` with `powerlevel9k` theme and `powerline nerd-font + awesome-config` font with the `Solarized Dark` color theme.
+Every liter saved below industry benchmarks converts to Acqua Credits, which they can trade, offset against excess usage, or even showcase as a testament to their sustainability efforts.
 
- ![image](https://user-images.githubusercontent.com/17109060/32149040-04f3125c-bd25-11e7-8003-66fd29bc18d4.png)
+With growing global water scarcity, Acqua Credits isn't just a project; it's a step towards a sustainable future. Let's make every drop count, together!
 
-*If you're interested in knowing the powerlevel9k configuration to get this prompt, have a look at [this gist](https://gist.github.com/athityakumar/1bd5e9e24cd2a1891565573a893993eb).*
+![AcquaChain](https://github.com/asusrid/acquaticos/assets/48621389/57d34783-78af-4526-9df6-8f5bf2742651)
 
-# Table of contents
+[
+](https://drive.google.com/file/d/1qOYJkXYR6puonu_XWNrho_BOeAjgNJb7/view?usp=sharing)
 
-- [Usage](#usage)
-  - [Flags](#flags)
-    - `-1`
-    - `-a`   (or) `--all`
-    - `-A`   (or) `--almost-all`
-    - `-d`   (or) `--dirs`
-    - `-f`   (or) `--files`
-    - `-h`   (or) `--help`
-    - `-l`   (or) `--long`
-    - `-r`   (or) `--report`
-    - `--tree` (or) `--tree=[DEPTH]`
-    - `--gs` (or) `--git-status`
-    - `--sd` (or) `--sort-dirs` or `--group-directories-first`
-    - `--sf` (or) `--sort-files`
-    - `-t`
-  - [Combination of flags](#combination-of-flags)
-- [Installation](#installation)
-- [Recommended configurations](#recommended-configurations)
-- [Custom configurations](#custom-configurations)
-- [Updating](#updating)
-- [Uninstallation](#uninstallation)
-- [Contributing](#contributing)
-- [License](#license)
+# Applications
 
-# Usage
+- IoT Simulators
+- API Gateway
+- Smart-Contracts
+- Dashboard
 
-[(Back to top)](#table-of-contents)
+---
 
-Man pages have been added. Checkout `man colorls`.
+# IoT Water Consumption Sensors
 
-### Flags
+This repository simulates the AcquaChain IoT water consumption sensors, designed to measure water consumption by companies in real-time and send this data directly to the blockchain for transparency, efficiency, and rewards.
 
-- With `-1` : Lists one entry per line
+## Overview
 
-  ![image](https://user-images.githubusercontent.com/17109060/32149062-4f0547ca-bd25-11e7-98b6-587467379704.png)
+The AcquaChain IoT sensors are pivotal in the Acqua ecosystem. By providing accurate, real-time water consumption data, they allow companies to monitor their usage, earn rewards through the AcquaCoin ERC20 token for water conservation, and maintain a transparent record on the AcquaDashboard blockchain.
 
-- With `-a` (or) `--all` : Does not ignore entries starting with '.'
+## Features
 
-  ![image](https://user-images.githubusercontent.com/17109060/32149045-182eb39e-bd25-11e7-83d4-897cb14bcff3.png)
+- **Real-Time Monitoring**: Simulated sensors can generate water consumption data in real-time.
+- **Blockchain Integration**: Sensors are integrated to push the data directly to the AcquaDashboard smart contract on the blockchain.
+- **Tamper-Proof**: The design ensures that once data is sent to the blockchain, it cannot be altered, ensuring integrity and transparency.
 
-- With `-A` (or) `--almost-all` : Does not ignore entries starting with '.', except `./` and `../`
+---
 
-  ![image](https://user-images.githubusercontent.com/17109060/32149046-1ef7664e-bd25-11e7-8bd9-bfc3c8b27b74.png)
+# AcquaChain IoT Sensor API Gateway
 
-- With `-d` (or) `--dirs` : Shows only directories
+The AcquaChain IoT Sensor API Gateway is a bridge that facilitates seamless communication between AcquaChain simulated water consumption sensors and the blockchain. It ensures data integrity, secure transmission, and accurate representation of water consumption data on the AcquaDashboard blockchain.
 
-  ![image](https://user-images.githubusercontent.com/17109060/32149066-5f842aa8-bd25-11e7-9bf0-23313b717182.png)
+## Overview
 
-- With `-f` (or) `--files` : Shows only files
+The primary function of the API Gateway is to provide an interface for the Acqua IoT sensors to send real-time water consumption data. Once this data is received, the API processes, validates, and then pushes the data to the AcquaDashboard smart contract on the blockchain.
 
-  ![image](https://user-images.githubusercontent.com/17109060/32149065-5a27c9d4-bd25-11e7-9a2b-fd731d76a058.png)
+## Features
 
-- With `-h` (or) `--help` : Prints a very helpful help menu
+- **Data Validation**: Ensures that the data sent by the IoT sensors is consistent and free of anomalies.
+- **Secure Transmission**: Incorporates security measures to protect data during transmission.
+- **Blockchain Integration**: Facilitates direct data transmission to the AcquaDashboard smart contract.
 
-  ![image](https://user-images.githubusercontent.com/17109060/32149096-cf2cf5b0-bd25-11e7-84b6-909d79099c98.png)
+---
 
-- With `-l` (or) `--long` : Shows in long listing format
+# AcquaDashboard
 
-  ![image](https://user-images.githubusercontent.com/17109060/32149049-2a63ae48-bd25-11e7-943c-5ceed25bd693.png)
+AcquaDashboard is an application where companies can monitor their AcquaToken credits and retrieve their water consumption data directly from the Ethereum blockchain.
 
-- With `-r` (or) `--report` : Shows brief report about number of files and folders shown
+## Features
+- **Token Balance Check**: Companies can easily see their current AcquaToken credits.
+- **Water Consumption Data**: Fetch water consumption data registered on the blockchain.
+- **Wallet-based Authentication**: Companies can securely access the dashboard using their Ethereum wallets. No username or password required.
 
-  ![image](https://user-images.githubusercontent.com/17109060/32149082-96a83fec-bd25-11e7-9081-7f77e4c90e90.png)
+## Usage
+- **Check AcquaToken Balance**: Upon logging in, your AcquaToken balance will be displayed on the main dashboard.
+- **Pull Water Consumption Data**: Navigate to the designated section and retrieve your company's water consumption data.
 
-- With `--tree` (or) `--tree=[DEPTH]` : Shows tree view of the directory with the specified depth (default 3)
+## Security
+The AcquaToken Dashboard uses wallet-based authentication. Ensure you never share your private keys and always use the application in a secure environment.
 
-  ![image](https://user-images.githubusercontent.com/17109060/32149051-32e596e4-bd25-11e7-93a9-5e50c8d2bb19.png)
+---
 
-- With `--gs` (or) `--git-status` : Shows git status for each entry
+# AcquaChain Smart Contracts
 
-  ![image](https://user-images.githubusercontent.com/17109060/32149075-7a1a1954-bd25-11e7-964e-1adb173aa2b9.png)
+Contains the smart contracts for the AcquaChain ecosystem, designed to promote and reward water conservation by companies.
 
-- With `--sd` (or) `--sort-dirs` or `--group-directories-first` : Shows directories first, followed by files
+## Smart-Contracts
 
-  ![image](https://user-images.githubusercontent.com/17109060/32149068-65117fc0-bd25-11e7-8ada-0b055603e3fd.png)
+### 1. AcquaCoin
 
-- With `--sf` (or) `--sort-files` : Shows files first, followed by directories
+- **Type**: ERC20 Token
+- **Purpose**: This token is awarded to companies when they achieve measurable water savings. These tokens can be exchanged for tax credits, providing financial incentives for companies to minimize their water usage.
 
-  ![image](https://user-images.githubusercontent.com/17109060/32149071-6b379de4-bd25-11e7-8764-a0c577e526a1.png)
+### 2. AcquaDashboard
 
-- With `-t` : Sort by modification time, newest first (NEED TO ADD IMAGE)
-
-- With color options : `--light` or `--dark` can be passed as a flag, to choose the appropriate color scheme. By default, the dark color scheme is chosen. In order to tweak any color, read [Custom configurations](#custom-configurations).
-
-### Combination of flags
-
-- Using `--gs` with `-t` :
-
-  ![image](https://user-images.githubusercontent.com/17109060/32149076-8423c864-bd25-11e7-816e-8642643d2c27.png)
-
-- Using `--gs` with `-l` :
-
-  ![image](https://user-images.githubusercontent.com/17109060/32149078-899b0622-bd25-11e7-9810-d398eaa77e32.png)
-
-- Using `--sd` with `-l` and `-A` :
-
-  ![image](https://user-images.githubusercontent.com/17109060/32149084-9eb2a416-bd25-11e7-8fb7-a9d336c6e038.png)
-
-- Using `--non-human-readable` with `-l` :
-  - This will print the file sizes in bytes (non-human readable format)
-
-  ![image](https://user-images.githubusercontent.com/19269206/234581461-1e1fdd90-a362-4cea-ab82-5ca360746be8.png)
-
-# Installation
-
-[(Back to top)](#table-of-contents)
-
-1. Install Ruby (preferably, version >= 2.6)
-2. [Download](https://www.nerdfonts.com/font-downloads) and install a Nerd Font. Have a look at the [Nerd Font README](https://github.com/ryanoasis/nerd-fonts/blob/master/readme.md) for installation instructions.
-
-    *Note for `iTerm2` users - Please enable the Nerd Font at iTerm2 > Preferences > Profiles > Text > Non-ASCII font > Hack Regular Nerd Font Complete.*
-
-    *Note for `HyperJS` users - Please add `"Hack Nerd Font"` Font as an option to `fontFamily` in your `~/.hyper.js` file.*
-
-3. Install the [colorls](https://rubygems.org/gems/colorls/) ruby gem with `gem install colorls`
-
-    *Note for `rbenv` users - In case of load error when using `lc`, please try the below patch.*
-
-    ```sh
-    rbenv rehash
-    rehash
-    ```
-
-4. Enable tab completion for flags by entering following line to your shell configuration file (`~/.bashrc` or `~/.zshrc`) :
-    ```bash
-    source $(dirname $(gem which colorls))/tab_complete.sh
-    ```
-
-5. Start using `colorls` :tada:
-
-6. Have a look at [Recommended configurations](#recommended-configurations) and [Custom configurations](#custom-configurations).
-
-# Recommended configurations
-
-[(Back to top)](#table-of-contents)
-
-1. To add some short command (say, `lc`) with some flag options (say, `-l`, `-A`, `--sd`) by default, add this to your shell configuration file (`~/.bashrc`, `~/.zshrc`, etc.) :
-    ```sh
-    alias lc='colorls -lA --sd'
-    ```
-
-2. For changing the icon(s) to other unicode icons of choice (select icons from [here](https://nerdfonts.com/)), change the YAML files in a text editor of your choice (say, `subl`)
-
-    ```sh
-    subl $(dirname $(gem which colorls))/yaml
-    ```
-
-# Custom configurations
-
-[(Back to top)](#table-of-contents)
-
-You can overwrite the existing icons and colors mapping by copying the yaml files from `$(dirname $(gem which colorls))/yaml` into `~/.config/colorls`, and changing them.
-
-- To overwrite color mapping :
-
-  Please have a look at the [list of supported color names](https://github.com/sickill/rainbow#color-list). You may also use a color hex code as long as it is quoted within the YAML file and prefaced with a `#` symbol.
-
-  Let's say that you're using the dark color scheme and would like to change the color of untracked file (`??`) in the `--git-status` flag to yellow. Copy the defaut `dark_colors.yaml` and change it.
-
-  ```sh
-  cp $(dirname $(gem which colorls))/yaml/dark_colors.yaml ~/.config/colorls/dark_colors.yaml
-  ```
-
-  In the `~/.config/colorls/dark_colors.yaml` file, change the color set for `untracked` from `darkorange` to `yellow`, and save the change.
-
-  ```
-  untracked: yellow
-  ```
-
-  Or, using hex color codes:
-
-  ```
-  untracked: '#FFFF00'
-  ```
-
-- To overwrite icon mapping :
-
-  Please have a look at the [list of supported icons](https://nerdfonts.com/). Let's say you want to add an icon for swift files. Copy the default `files.yaml` and change it.
-
-  ```sh
-  cp $(dirname $(gem which colorls))/yaml/files.yaml ~/.config/colorls/files.yaml`
-  ```
-
-  In the `~/.config/colorls/files.yaml` file, add a new icon / change an existing icon, and save the change.
-
-
-  ```
-  swift: "\uF179"
-  ```
-
-- User contributed alias configurations :
-
-  - [@rjhilgefort](https://gist.github.com/rjhilgefort/51ea47dd91bcd90cd6d9b3b199188c16)
-
-
-# Updating
-
-[(Back to top)](#table-of-contents)
-
-Want to update to the latest version of `colorls`?
-
-```sh
-gem update colorls
-```
-
-# Uninstallation
-
-[(Back to top)](#table-of-contents)
-
-Want to uninstall and revert back to the old style? No issues (sob). Please feel free to open an issue regarding how we can enhance `colorls`.
-
-```sh
-gem uninstall colorls
-```
-
-# Contributing
-
-[(Back to top)](#table-of-contents)
-
-Your contributions are always welcome! Please have a look at the [contribution guidelines](CONTRIBUTING.md) first. :tada:
-
-# License
-
-[(Back to top)](#table-of-contents)
-
-
-The MIT License (MIT) 2017 - [Athitya Kumar](https://github.com/athityakumar/). Please have a look at the [LICENSE.md](LICENSE.md) for more details.
+- **Type**: Data Management Contract
+- **Purpose**: Companies use this smart contract to push data from their IoT sensors, providing a transparent and tamper-proof record of their water consumption.
