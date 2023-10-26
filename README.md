@@ -23,12 +23,7 @@ With growing global water scarcity, Acqua Credits isn't just a project; it's a s
 - Demo
 - Team
 - [Installation](#installation)
-- [Recommended configurations](#recommended-configurations)
-- [Custom configurations](#custom-configurations)
-- [Updating](#updating)
-- [Uninstallation](#uninstallation)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 # Overview
 
